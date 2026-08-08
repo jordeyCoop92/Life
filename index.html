@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life HQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-theme="dark">
+
+  <div class="app-shell">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">HQ</span>
+        <span class="brand-name">Life HQ</span>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-view="dashboard">
+          <span class="nav-dot"></span>Dashboard
+        </button>
+        <button class="nav-item" data-view="calendar">
+          <span class="nav-dot"></span>Calendar
+        </button>
+        <button class="nav-item" data-view="tasks">
+          <span class="nav-dot"></span>Tasks
+        </button>
+        <button class="nav-item" data-view="projects">
+          <span class="nav-dot"></span>Projects
+        </button>
+        <button class="nav-item" data-view="budget">
+          <span class="nav-dot"></span>Budget
+        </button>
+        <button class="nav-item" data-view="goals">
+          <span class="nav-dot"></span>Goals
+        </button>
+        <button class="nav-item" data-view="wellness">
+          <span class="nav-dot"></span>Wellness
+        </button>
+        <button class="nav-item" data-view="chores">
+          <span class="nav-dot"></span>Chores
+        </button>
+        <button class="nav-item" data-view="setup">
+          <span class="nav-dot"></span>Setup
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button id="theme-toggle" class="theme-toggle" title="Toggle light / dark">
+          <span id="theme-toggle-label">Dark mode</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <header class="topbar">
+        <h1 id="view-title">Dashboard</h1>
+        <div id="topbar-actions" class="topbar-actions"></div>
+      </header>
+
+      <div class="view-container" id="view-container">
+        <section id="view-dashboard" class="view active"></section>
+        <section id="view-calendar" class="view"></section>
+        <section id="view-tasks" class="view"></section>
+        <section id="view-projects" class="view"></section>
+        <section id="view-budget" class="view"></section>
+        <section id="view-goals" class="view"></section>
+        <section id="view-wellness" class="view"></section>
+        <section id="view-chores" class="view"></section>
+        <section id="view-setup" class="view"></section>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal host -->
+  <div id="modal-root"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pick-lists.js"></script>
+  <script src="js/render-tasks.js"></script>
+  <script src="js/render-projects.js"></script>
+  <script src="js/render-goals.js"></script>
+  <script src="js/render-budget.js"></script>
+  <script src="js/render-wellness.js"></script>
+  <script src="js/render-chores.js"></script>
+  <script src="js/render-calendar.js"></script>
+  <script src="js/render-setup.js"></script>
+  <script src="js/render-dashboard.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
